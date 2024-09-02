@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::parent(~{::#content},~{::title},~{::script})}">
+<head>
+    <title th:text="${loggedInUser.name} +' ! SCM'">Home Page</title>
+</head>
+<body>
+    <div id="content">
+        <div th:if="${loggedInUser}">
+            <div th:replace="~{user/sidebar::sidebar}"></div>
+        </div>
+        <div  class="sm:pl-64 pt-20 ">
+            <div class="container mx-auto p-6">
+                <h1 class="text-4xl font-bold mb-6 text-center">Dashboard</h1>
+            
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Total Contacts Card -->
+                    <div class="flex flex-col items-center bg-white dark:bg-gray-800 p-4 rounded shadow-md">
+                        <h2 class="text-lg font-semibold mb-2">Total Contacts</h2>
+                        <img th:src="@{'/images/contact-book.png'}" alt="" class="h-10 w-10">
+                        <p id="totalContacts" class="text-2xl" th:text="${loggedInUser.contacts.size()}">0</p>
+                    </div>
+                    
+                    <!-- Favorite Contacts Card -->
+                    <div class="flex flex-col items-center bg-white dark:bg-gray-800 p-4 rounded shadow-md">
+                        <h2 class="text-lg font-semibold mb-2">Favorite Contacts</h2>
+                        <img th:src="@{'/images/star.png'}" alt="" class="h-10 w-10">
+                        <p id="favoriteContacts" class="text-2xl" th:text="${count}">0</p>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+    <script>
+        console.log("Welcome to about page");
+    </script>
+</body>
+</html>

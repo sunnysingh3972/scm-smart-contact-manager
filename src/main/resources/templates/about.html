@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::parent(~{::#content},~{::title},~{::script})}">
+<head>
+    <title>About Page</title>
+</head>
+<body>
+    <div id="content">
+        <main class="container mx-auto px-4 py-8">
+            <section class="text-center mb-12">
+                <h2 class="text-3xl font-semibold mb-6 text-blue-800 dark:text-blue-400">About Us</h2>
+                <p class="text-lg text-gray-700 dark:text-gray-300">At Smart Contact Manager, we are dedicated to providing innovative solutions for managing your contacts. Our team is passionate about leveraging technology to enhance your productivity and ensure seamless integration with your existing tools.</p>
+            </section>
+    
+            <section class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6 text-blue-700 dark:text-blue-300">Our Mission</h3>
+                <p class="text-gray-700 dark:text-gray-400 mb-6">Our mission is to simplify contact management through intuitive software solutions. We aim to empower users by providing easy-to-use tools that integrate seamlessly with various platforms, ensuring that contact information is organized, secure, and accessible.</p>
+            </section>
+    
+            <section class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6 text-blue-700 dark:text-blue-300">Meet the Team</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Team Member -->
+                    <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-6">
+                        <img src="https://via.placeholder.com/150" alt="Team Member 1" class="w-24 h-24 rounded-full mx-auto mb-4">
+                        <h4 class="text-xl font-semibold mb-2">Alice Johnson</h4>
+                        <p class="text-gray-700 dark:text-gray-400">CEO & Founder</p>
+                        <p class="text-gray-600 dark:text-gray-500 mt-2">Alice is the visionary behind Smart Contact Manager. With over a decade of experience in tech and project management, she leads our team with passion and expertise.</p>
+                    </div>
+                    <!-- Team Member -->
+                    <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-6">
+                        <img src="https://via.placeholder.com/150" alt="Team Member 2" class="w-24 h-24 rounded-full mx-auto mb-4">
+                        <h4 class="text-xl font-semibold mb-2">Bob Smith</h4>
+                        <p class="text-gray-700 dark:text-gray-400">Lead Developer</p>
+                        <p class="text-gray-600 dark:text-gray-500 mt-2">Bob is our lead developer, responsible for turning our ideas into reality. His expertise in software engineering ensures that our solutions are both robust and innovative.</p>
+                    </div>
+                    <!-- Team Member -->
+                    <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-6">
+                        <img src="https://via.placeholder.com/150" alt="Team Member 3" class="w-24 h-24 rounded-full mx-auto mb-4">
+                        <h4 class="text-xl font-semibold mb-2">Charlie Davis</h4>
+                        <p class="text-gray-700 dark:text-gray-400">UX/UI Designer</p>
+                        <p class="text-gray-600 dark:text-gray-500 mt-2">Charlie designs the user experience and interface, ensuring our products are both user-friendly and visually appealing. His work is crucial to delivering a seamless user experience.</p>
+                    </div>
+                </div>
+            </section>
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex justify-between shadow-lg bg-gray-600 dark:bg-gray-800 ">
+                <div class="max-w-4xl mx-auto  dark:bg-gray-800  rounded-lg overflow-hidden mb-12">
+                    <div class="py-10">
+                        <h2 class="text-2xl font-bold text-gray-200 dark:text-gray-300 mb-6">Contact Information
+                        </h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-200 dark:text-gray-300">Address</h3>
+                                <p class="mt-2 text-gray-200 dark:text-gray-400">Hazaribagh, Jharkhand India</p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-200 dark:text-gray-300">Phone</h3>
+                                <p class="mt-2 text-gray-200 dark:text-gray-400">+91 6299572130</p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-200 dark:text-gray-300">Email</h3>
+                                <p class="mt-2 text-gray-200 dark:text-gray-400">info@scm.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class=" text-white py-10 ">
+                    <div class="container mx-auto px-6 lg:px-8">
+                        <div class="flex flex-col lg:flex-row justify-center items-center">
+    
+                            <!-- Social Media Links -->
+                            <div class="flex justify-center space-x-6 mt-6 lg:mt-0">
+                                <a href="#" class="hover:text-gray-400 transition-colors">
+                                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                                        <!-- Icon: Twitter -->
+                                        <path
+                                            d="M23.954 4.569c-.885.385-1.83.643-2.825.758 1.014-.611 1.794-1.574 2.163-2.724-.951.566-2.005.978-3.127 1.2-.897-.955-2.178-1.55-3.594-1.55-2.72 0-4.92 2.2-4.92 4.917 0 .385.045.76.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.423.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.247-2.229-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.112-.848.171-1.296.171-.314 0-.621-.03-.921-.086.631 1.953 2.445 3.376 4.6 3.414-1.68 1.318-3.8 2.106-6.102 2.106-.396 0-.788-.023-1.175-.068 2.179 1.397 4.768 2.212 7.557 2.212 9.054 0 14.002-7.496 14.002-13.986 0-.21 0-.42-.015-.63.961-.694 1.797-1.562 2.457-2.549z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="hover:text-gray-400 transition-colors">
+                                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                                        <!-- Icon: Facebook -->
+                                        <path
+                                            d="M22.675 0h-21.35C.615 0 0 .615 0 1.375v21.25C0 23.385.615 24 1.375 24h11.494V14.708h-3.15v-3.632h3.15V8.408c0-3.115 1.887-4.814 4.648-4.814 1.321 0 2.454.098 2.785.142v3.23l-1.913.001c-1.5 0-1.794.714-1.794 1.762v2.31h3.588l-.467 3.632h-3.12V24h6.11c.76 0 1.375-.615 1.375-1.375v-21.25C24 .615 23.385 0 22.675 0z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="hover:text-gray-400 transition-colors">
+                                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                                        <!-- Icon: Instagram -->
+                                        <path
+                                            d="M12 2.163c3.204 0 3.584.012 4.849.07 1.366.063 2.633.324 3.608 1.299.976.976 1.236 2.243 1.299 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.063 1.366-.324 2.633-1.299 3.608-.976.976-2.243 1.236-3.608 1.299-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.063-2.633-.324-3.608-1.299-.976-.976-1.236-2.243-1.299-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.063-1.366.324-2.633 1.299-3.608.976-.976 2.243-1.236 3.608-1.299 1.265-.058 1.645-.07 4.849-.07m0-2.163C8.736 0 8.332 0 7.053.071 5.774.143 4.607.392 3.533 1.467 2.458 2.543 2.209 3.71 2.137 4.989.071 5.923 0 6.263 0 12s.071 6.077.137 7.056c.072 1.279.321 2.446 1.396 3.521s2.242 1.325 3.521 1.397C8.332 23.929 8.736 24 12 24s3.668-.071 4.947-.137c1.279-.072 2.446-.321 3.521-1.396s1.325-2.242 1.397-3.521c.066-1.129.137-1.47.137-7.056s-.071-6.077-.137-7.056c-.072-1.279-.321-2.446-1.396-3.521s-2.242-1.325-3.521-1.397C15.668.071 15.264 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.999 3.999 3.999 0 0 1 0 7.999zm6.406-11.845a1.44 1.44 0 1 0 0-2.879 1.44 1.44 0 0 0 0 2.879z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="hover:text-gray-400 transition-colors">
+                                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                                        <!-- Icon: LinkedIn -->
+                                        <path
+                                            d="M20.447 20.452h-3.554v-5.6c0-1.334-.025-3.053-1.86-3.053-1.863 0-2.148 1.45-2.148 2.95v5.703h-3.555v-11.53h3.414v1.575h.049c.476-.9 1.635-1.85 3.367-1.85 3.6 0 4.268 2.37 4.268 5.448v6.357zm-14.08-13.18c-1.145 0-2.07-.926-2.07-2.072 0-1.146.925-2.07 2.07-2.07s2.07.924 2.07 2.07c0 1.146-.925 2.072-2.07 2.072zm1.777 13.18h-3.555v-11.53h3.555v11.53zm17.856-20.452h-21.35c-.76 0-1.375.615-1.375 1.375v21.25c0 .76.615 1.375 1.375 1.375h21.351c.76 0 1.375-.615 1.375-1.375v-21.25c0-.76-.615-1.375-1.375-1.375z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <div class="mt-10 text-center text-gray-200 dark:text-gray-400 text-sm">
+                            <p>&copy; 2024 Smart Contact Manager. All rights reserved.</p>
+                            <p>Designed with ♥ by YourName</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script>
+        console.log("Welcome to about page");
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::parent(~{::#content},~{::title},~{::script})}">
+<head>
+    <title th:text="${loggedInUser.name} +' ! SCM'">Home Page</title>
+</head>
+<body>
+    <div id="content">
+        <div th:if="${loggedInUser}">
+            <div th:replace="~{user/sidebar::sidebar}"></div>
+        </div>
+        <div  class="sm:pl-64 pt-20 ">
+
+            <div class="flex justify-center flex-col items-center">
+
+                <!-- profile card -->
+
+                <div class="max-w-2xl mx-auto bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden transition-colors duration-300">
+                    <div class="flex items-center justify-center h-64 bg-gray-200 dark:bg-gray-700">
+                        <img class="h-40 w-40 rounded-full object-cover" th:src="@{${loggedInUser.profilePic}}" alt="Profile Picture">
+                    </div>
+                    <div class="p-8">
+                        <h2 class="text-3xl font-semibold text-gray-800 dark:text-gray-200" th:text="${loggedInUser.name}">{{name}}</h2>
+                        <p class="text-lg text-gray-600 dark:text-gray-400 " th:text="${loggedInUser.email}">{{email}}</p>
+                        <p class="text-lg text-gray-600 dark:text-gray-400" th:text="${loggedInUser.phoneNumber}">{{phoneNumber}}</p>
+                        <p class="mt-6 text-gray-700 dark:text-gray-300" th:text="${loggedInUser.about}">{{about}}</p>
+                        <div class="mt-6 flex space-x-5">
+                            <p class="text-md text-gray-500 dark:text-gray-400">Email Verified: 
+                                <span th:classappend="${loggedInUser.emailVerified ? 'text-green-500' : 'text-red-500'}"  th:text="${{loggedInUser.emailVerified ? 'Yes' : 'No'}}">
+                                    {{emailVerified ? 'Yes' : 'No'}}
+                                </span>
+                            </p>
+                            <p class="text-md text-gray-500 dark:text-gray-400">Phone Verified: 
+                                <span th:classappend="${loggedInUser.phoneVerified ? 'text-green-500' : 'text-red-500'}" th:text="${{loggedInUser.phoneVerified ? 'Yes' : 'No'}}">
+                                    {}
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+         </div>
+    </div>
+    <script>
+        console.log("Welcome to about page");
+    </script>
+</body>
+</html>

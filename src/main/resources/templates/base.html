@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="light" lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="parent(content,title,script)">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:replace="${title}">Base Page</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+    <link rel="stylesheet" th:href="@{'/css/output.css'}">
+    <link rel="stylesheet" th:href="@{'/css/style.css'}">
+
+</head>
+
+<body class="dark:bg-gray-900 bg-gray-100 dark:text-white">
+    <!-- navbar -->
+    <div th:if="${loggedInUser}">
+        <div data-th-replace="~{user/user-navbar::navbar}"></div>
+    </div>
+
+    <div th:unless="${loggedInUser}">
+        <div th:replace="~{navbar::navbar}"></div>
+    </div>
+    <!-- main content -->
+    <div class="p-4 ">
+        <section th:replace="${content}"></section>
+    </div>
+
+    <!-- footer -->
+    <footer class="p-4">
+        
+    </footer>
+
+    <!-- flowbite -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/cd058eddc3.js" crossorigin="anonymous"></script>
+   
+    <script th:src="@{/js/script.js}"></script>
+    <th:block data-th-replace="${script}"></th:block>
+
+</body>
+
+</html>

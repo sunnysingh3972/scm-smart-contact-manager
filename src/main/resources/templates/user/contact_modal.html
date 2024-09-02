@@ -1,0 +1,83 @@
+<div th:fragment="contact_modal">
+    
+
+<!-- Modal toggle -->
+
+  
+  <!-- Main modal -->
+  <div id="view_contact_modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+      <div class="relative p-4 w-full max-w-2xl max-h-full">
+          <!-- Modal content -->
+          <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+              <!-- Modal header -->
+              <div class="flex items-center justify-between flex-col space-y-3 p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                    <img class="h-20 w-20 rounded" id="contact_image" src="" alt="http://foo.com/bar.jpg">
+                    <h3 id="contact_name" class="text-xl font-semibold text-gray-900 dark:text-white">
+                    </h3>
+                    <p class="text-gray-800 dark:text-gray-300" id="contact_email"></p>
+                    <p class="text-gray-800 dark:text-gray-300" id="contact_phone"></p>
+                  
+              </div>
+              <!-- Modal body -->
+              <div class="p-4 md:p-5 space-y-4">
+                 
+
+<div class="relative overflow-x-auto">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <tbody>
+            <tr class="bg-white  dark:bg-gray-700 dark:border-gray-700">
+                <th  scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Address
+                </th>
+                <td class="px-6 py-4" id="contact_address">
+                    Silver
+                </td>
+            </tr>
+            <tr class="bg-white  dark:bg-gray-700 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Description
+                </th>
+                <td class="px-6 py-4" id="contact_description">
+                    White
+                </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    favorite
+                </th>
+                <td class="px-6 py-4" id="contact_favourite">
+                    Black
+                </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Website Link
+                </th>
+                <td class="px-6 py-4" >
+                    <a id="contact_website"></a>
+                </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Linkedin Link
+                </th>
+                <td class="px-6 py-4" >
+                   <a id="contact_linkdin"></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+              </div>
+              <!-- Modal footer -->
+              <div class="flex items-center p-4 md:p-5 border-t justify-center border-gray-200 rounded-b dark:border-gray-600">
+                  <button 
+                  onclick="closeContactModal()"
+                  data-modal-hide="static-modal" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+</div>
